@@ -259,3 +259,4 @@ buildNumber.properties
 .classpath
 
 # End of https://www.toptal.com/developers/gitignore/api/java,macos,maven,intellij,eclipse
+.claude/

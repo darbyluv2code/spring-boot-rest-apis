@@ -73,9 +73,9 @@ jobs:
       run: |
         set -e
         echo "Building Project 03: Spring Boot REST Security"
-        cd 03-spring-boot-rest-security
+        cd 03-spring-boot-rest-security/employees
         mvn clean compile -B -q || {
-          echo "Failed to compile 03-spring-boot-rest-security"
+          echo "Failed to compile 03-spring-boot-rest-security/employees"
           exit 1
         }
         echo "Project 03 completed successfully"

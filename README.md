@@ -1,5 +1,7 @@
 # Spring Boot 4 REST APIs: Building Modern REST APIs: Building Modern REST APIs
 
+![Build Status](https://github.com/darbyluv2code/spring-boot-rest-apis/actions/workflows/build.yml/badge.svg)
+
 Source code for the course: [Spring Boot 4 REST APIs: Building Modern REST APIs](https://www.udemy.com/course/spring-boot-rest-apis/)
 
 If you have questions or need tech support, post your questions to the [classroom discussion forum](https://www.udemy.com/spring-boot-rest-apis/learn/v4/questions).

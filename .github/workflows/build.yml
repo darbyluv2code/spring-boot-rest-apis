@@ -1,0 +1,106 @@
+name: Build
+
+on:
+  push:
+    branches: [ main, master ]
+
+jobs:
+  build-01-books:
+    name: "Project 01: Books"
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up JDK 25
+      uses: actions/setup-java@v4
+      with:
+        java-version: '25'
+        distribution: 'temurin'
+        cache: 'maven'
+
+    - name: Build project
+      run: |
+        set -e
+        echo "Building Project 01: Books"
+        cd 01-books
+        mvn clean compile -B -q || {
+          echo "Failed to compile 01-books"
+          exit 1
+        }
+        echo "Project 01 completed successfully"
+
+  build-02-books-continued:
+    name: "Project 02: Books Continued"
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up JDK 25
+      uses: actions/setup-java@v4
+      with:
+        java-version: '25'
+        distribution: 'temurin'
+        cache: 'maven'
+
+    - name: Build project
+      run: |
+        set -e
+        echo "Building Project 02: Books Continued"
+        cd 02-books-continued
+        mvn clean compile -B -q || {
+          echo "Failed to compile 02-books-continued"
+          exit 1
+        }
+        echo "Project 02 completed successfully"
+
+  build-03-spring-boot-rest-security:
+    name: "Project 03: Spring Boot REST Security"
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up JDK 25
+      uses: actions/setup-java@v4
+      with:
+        java-version: '25'
+        distribution: 'temurin'
+        cache: 'maven'
+
+    - name: Build project
+      run: |
+        set -e
+        echo "Building Project 03: Spring Boot REST Security"
+        cd 03-spring-boot-rest-security
+        mvn clean compile -B -q || {
+          echo "Failed to compile 03-spring-boot-rest-security"
+          exit 1
+        }
+        echo "Project 03 completed successfully"
+
+  build-04-todos:
+    name: "Project 04: Todos"
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up JDK 25
+      uses: actions/setup-java@v4
+      with:
+        java-version: '25'
+        distribution: 'temurin'
+        cache: 'maven'
+
+    - name: Build project
+      run: |
+        set -e
+        echo "Building Project 04: Todos"
+        cd 04-todos
+        mvn clean compile -B -q || {
+          echo "Failed to compile 04-todos"
+          exit 1
+        }
+        echo "Project 04 completed successfully"

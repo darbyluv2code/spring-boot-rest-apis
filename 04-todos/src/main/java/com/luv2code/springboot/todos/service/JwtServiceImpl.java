@@ -34,7 +34,7 @@ public class JwtServiceImpl implements JwtService{
 
     private Claims extractAllClaims(String token) {
         return Jwts.parser()
-                .verifyWith((SecretKey) getSigningKey())
+                .verifyWith(getSigningKey())
                 .build()
                 .parseSignedClaims(token)
                 .getPayload();
@@ -61,7 +61,7 @@ public class JwtServiceImpl implements JwtService{
                 .subject(userDetails.getUsername())
                 .issuedAt(new Date(System.currentTimeMillis()))
                 .expiration(new Date(System.currentTimeMillis() + JWT_EXPIRATION))
-                .signWith((SecretKey) getSigningKey(), Jwts.SIG.HS256)
+                .signWith(getSigningKey(), Jwts.SIG.HS256)
                 .compact();
     }
 

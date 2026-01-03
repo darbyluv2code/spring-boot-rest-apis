@@ -23,7 +23,7 @@ jobs:
       run: |
         set -e
         echo "Building Project 01: Books"
-        cd 01-books
+        cd section-02-spring-boot-rest-project-1/01-books
         mvn clean compile -B -q || {
           echo "Failed to compile 01-books"
           exit 1
@@ -48,7 +48,7 @@ jobs:
       run: |
         set -e
         echo "Building Project 02: Books Continued"
-        cd 02-books-continued
+        cd section-03-spring-boot-rest-project-2/02-books-continued
         mvn clean compile -B -q || {
           echo "Failed to compile 02-books-continued"
           exit 1
@@ -73,7 +73,7 @@ jobs:
       run: |
         set -e
         echo "Building Project 03: Spring Boot REST Security"
-        cd 03-spring-boot-rest-security/employees
+        cd section-04-spring-boot-rest-project-3/03-spring-boot-rest-security/employees
         mvn clean compile -B -q || {
           echo "Failed to compile 03-spring-boot-rest-security/employees"
           exit 1
@@ -98,7 +98,7 @@ jobs:
       run: |
         set -e
         echo "Building Project 04: Todos"
-        cd 04-todos
+        cd section-06-spring-boot-rest-project-4/04-todos
         mvn clean compile -B -q || {
           echo "Failed to compile 04-todos"
           exit 1
